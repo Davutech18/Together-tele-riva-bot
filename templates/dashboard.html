@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Admin Dashboard</title></head>
+<body>
+    <h2>Saved Mobile Numbers</h2>
+    <ul>
+        {% for number, time in numbers %}
+        <li>{{ number }} - {{ time }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>User Chat Logs</h2>
+    <ul>
+        {% for user, msg, time in chats %}
+        <li><strong>{{ user }}</strong>: {{ msg }} <i>({{ time }})</i></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
